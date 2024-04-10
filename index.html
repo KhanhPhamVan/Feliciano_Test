@@ -1,0 +1,755 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title style="font-family: Verdana, Geneva, Tahoma, sans-serif;">Restaurent </title>
+    <link rel="stylesheet" href="css/bootstrap-5.3.3-dist/bootstrap-5.3.3-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/animation.css">
+    <link rel="icon" href="./img/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="./css/modal.css">
+    <link rel="stylesheet" href="./css/shopingCard.css">
+
+</head>
+
+<body>
+    <!-- top -->
+    <div class="top  ">
+        
+    </div>
+
+     <!-- navigation -->
+     <nav class="m-top-32 nav">
+        <div class="container">
+            <div class="row ">
+                <div class="col-2">
+                    <a class="nav__brand">Feliciano</a>
+                </div>
+
+                <div class="col-10">
+                    <div class="nav__page">
+                        <ul class="nav__listItem">
+                            <li class="nav__item "><a href="./index.html">Home</a></li>
+                            <li class="nav__item"><a href="./about.html">About</a></li>
+                            <li class="nav__item"><a href="./menu.html">Menu</a></li>
+                            <li class="nav__item"><a href="./storise.html">Stories</a></li>
+                            <li class="nav__item"><a href="./contact.html">Contact</a></li>
+                            <li class="nav__item button">Book a table </li>
+                            <li class="nav__item"><a href="./Login/login.html" >Login</a></li>
+                            <li class="nav__item shopping__cart__icon">
+                                <i class="fa-solid fa-cart-shopping" style=" font-size: 22px; "></i> 
+                                <span class="shopping__cart__quantity" style="color: #fff;">0</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="nav__bar">
+                        <i class="fa-solid fa-bars" style="color: #8d8d8d;"></i>
+                        <p class="text">MENU</p>
+                    </div>
+                </div>
+
+                <div class="col-12 nav__menu">
+                    <ul class="nav__listItem">
+                        <li class="nav__item "><a href="./index.html">Home</a></li>
+                        <li class="nav__item"><a href="./about.html">About</a></li>
+                        <li class="nav__item"><a href="./menu.html">Menu</a></li>
+                        <li class="nav__item"><a href="./storise.html">Stories</a></li>
+                        <li class="nav__item"><a href="./contact.html">Contact</a></li>
+                        <li class="nav__item button">Book a table </li>
+                        <li class="nav__item"><a href="./contact.html">Login</a></li>
+                        <li class="nav__item shopping__cart__icon">
+                            <i class="fa-solid fa-cart-shopping" style=" font-size: 22px; ">
+                                <span class="shopping__cart__quantity" style="color: #fff;">0</span>
+                            </i> 
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+
+    <!-- slider -->
+    <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="true">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <div
+                    style="background-image: url(./img/bg_1.jpg.webp); background-position: center; background-size: cover; width: 100%; height: 100vh; filter: brightness(0.3);">
+                </div>
+                <div class="slide__title showtotop">BEST RESTAURANT</div>
+            </div>
+            <div class="carousel-item">
+                <div
+                    style="background-image: url(./img/bg_2.jpg.webp); background-position: center; background-size: cover; width: 100%; height: 100vh; filter: brightness(0.3);">
+                </div>
+                <div class="slide__title showtotop">Nutritious & Tasty </div>
+            </div>
+            <div class="carousel-item">
+                <div
+                    style="background-image: url(./img/bg_3.jpg.webp); background-position: center; background-size: cover; width: 100%; height: 100vh; filter: brightness(0.3);">
+                </div>
+                <div class="slide__title showtotop">Delicious Specialties</div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
+    <!-- name brand -->
+    <section class="name__brand  ">
+        <div class="showtotop" style="font-family: Great Vibes, cursive ;">Feliciano</div>
+    </section>
+
+    <!-- menu -->
+    <section class="menu">
+        <div class="item  " >
+            <div class="container-fliud">
+                <div class="row">
+                    <div class="col-md-3 showtotop dl-02">
+                        <div class="menu__img">
+                            <img src="./img/intro1.webp" alt="">
+                        </div>
+                        <div class="menu__name  ">Grilled Beef with potatoes</div>
+                        <div class="menu__ingredient  ">Meat, Potatoes, Rice, Tomatoe</div>
+                    </div>
+                    <div class="col-md-3 showtotop dl-04">
+                        <div class="menu__img">
+                            <img src="./img/intro2.webp" alt="">
+                        </div>
+                        <div class="menu__name showtotop">Grilled Beef with potatoes</div>
+                        <div class="menu__ingredient showtotop">Meat, Potatoes, Rice, Tomatoe</div>
+                    </div>
+                    <div class="col-md-3 showtotop dl-06">
+                        <div class="menu__img">
+                            <img src="./img/intro3.webp" alt="">
+                        </div>
+                        <div class="menu__name">Grilled Beef with potatoes</div>
+                        <div class="menu__ingredient">Meat, Potatoes, Rice, Tomatoe</div>
+                    </div>
+                    <div class="col-md-3 showtotop dl-08">
+                        <div class="menu__img">
+                            <img src="./img/intro4.webp" alt="">
+                        </div>
+                        <div class="menu__name">Grilled Beef with potatoes</div>
+                        <div class="menu__ingredient">Meat, Potatoes, Rice, Tomatoe</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- about -->
+    <section class=" about">
+        <div class="item">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-7">
+                        <div class="row">
+                            <div class="col-6">
+                                <div class="about__img"
+                                    style="background-image: url('./img/about1.webp') ;margin-top: -30px;" ;>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="about__img" style="background-image: url('./img/about2.webp')">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-5 showtotop">
+                        <div class="heading__section">
+                            <div class="title" style=>About</div>
+                            <div class="sub">Feliciano Restaurant</div>
+                        </div>
+                        <div class="about__description">
+                            <p class="text">
+                                A small river named Duden flows by their place and supplies it with the necessary
+                                regelialia. It is a paradisematic country, in which roasted parts of sentences fly into
+                                your mouth.
+                            </p>
+                        </div>
+                        <div class="about__open">
+                            <p class="text" style=" display: inline-block;">Monday - Friday </p> <strong class="text"
+                                style=" display: inline-block;">8AM - 11AM</strong>
+                        </div>
+                        <div class="about__phone">
+                            <a href=""> 0337866041 </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- parameter -->
+    <section class="parameter">
+        <div class="item">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-5">
+                        <div class="row">
+                            <div class="col-lg-6 parameter__item showtotop dl-02">
+                                <div class="prameter__number year "> 18 </div>
+                                <p class="text fz-17">Year of experienced</p>
+                            </div>
+                            <div class="col-lg-6 parameter__item showtotop dl-04">
+                                <div class="prameter__number dish "> 100 </div>
+                                <p class="text fz-17">Menu/Dish</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-5">
+                        <div class="row">
+                            <div class="col-lg-6 parameter__item showtotop dl-06">
+                                <div class="prameter__number staff showtotop"> 50 </div>
+                                <p class="text fz-17">Staffs</p>
+                            </div>
+                            <div class="col-lg-6 parameter__item showtotop dl-08">
+                                <div class="prameter__number people "> 1500 </div>
+                                <p class="text fz-17">Happy Customer</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-2 showtotop dl-1">
+                        <p class="text fz-17">A small river named Duden flows by their place and supplies it with the
+                            necessary regelialia.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- services -->
+    <section class="item services">
+        <div class="container">
+            <div class="row m-bottom-40">
+                <div class="col-md-12 " style="text-align: center;">
+                    <div class="heading__section showtotop">
+                        <div class="title" style="">Serveices</div>
+                        <div class="sub" style="text-align: center; font-weight: 900;">Catering Services </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4 showtotop dl-02" style="text-align: center;">
+                    <div class="icon">
+                        <i class="fa-solid fa-cake-candles"></i>
+                    </div>
+                    <h2 class="service">
+                        Birthday Party
+                    </h2>
+                    <p class="text">
+                        Even the all-powerful Pointing has no control about the blind texts it is an almost
+                        unorthographic.
+                    </p>
+                </div>
+                <div class="col-md-4 showtotop dl-04" style="text-align: center;">
+                    <div class="icon">
+                        <i class="fa-solid fa-handshake"></i>
+                    </div>
+                    <h2 class="service">
+                        Birthday Party
+                    </h2>
+                    <p class="text">
+                        Even the all-powerful Pointing has no control about the blind texts it is an almost
+                        unorthographic.
+                    </p>
+                </div>
+                <div class="col-md-4 showtotop dl-06" style="text-align: center;">
+                    <div class="icon">
+                        <i class="fa-solid fa-shop"></i>
+                    </div>
+                    <h2 class="service">
+                        Birthday Party
+                    </h2>
+                    <p class="text">
+                        Even the all-powerful Pointing has no control about the blind texts it is an almost
+                        unorthographic.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- dish -->
+    <section class="item dish">
+        <div class="container">
+
+            <!-- breakfast -->
+            <div class="row g-0 " >
+                <div class="col-md-6">
+                    <div class="row g-0 dish__item showtotop dl-02">
+                        <div class="col-md-12 col-lg-6">
+                            <div class="dish__img" style="background-image: url('./img/food-1.webp  ');"></div>
+                        </div>
+                        <div class="col-md-12 col-lg-6 dish__desc">
+                            <div class="row g-0">
+                                <div class="col-8">
+                                    <h3 class="dish__name">Grilled Beef with potatoes</h3>
+                                </div>
+                                <div class="col" style="text-align: right;">
+                                    <span class="dish__price">29$</span>
+                                </div>
+                            </div>
+
+
+                            <p class="dish__prameter text">Meat, Potatoes, Rice, Tomatoe</p>
+                            <button class="order">Order now</button>
+                            <button class="add__card">Add to card</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 food__item">
+                    <div class="row g-0 dish__item showtotop dl-04">
+                        <div class="col-md-12 col-lg-6">
+                            <div class="dish__img" style="background-image: url('./img/food-2.webp  ');"></div>
+                        </div>
+                        <div class="col-md-12 col-lg-6 dish__desc">
+                            <div class="row g-0">
+                                <div class="col-8">
+                                    <h3 class="dish__name">Grilled Beef with potatoesss</h3>
+                                </div>
+                                <div class="col" style="text-align: right;">
+                                    <span class="dish__price">35$</span>
+                                </div>
+                            </div>
+
+
+                            <p class="dish__prameter text">Meat, Potatoes, Rice, Tomatoe</p>
+                            <button class="order">Order now</button>
+                            <button class="add__card">Add to card</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 food__item">
+                    <div class="row g-0 dish__item--reverse dish__item showtotop dl-06">
+
+                        <div class="col-md-12 col-lg-6 dish__desc">
+                            <div class="row g-0">
+                                <div class="col-8">
+                                    <h3 class="dish__name">Grilled Beef with potatoesssss</h3>
+                                </div>
+                                <div class="col" style="text-align: right;">
+                                    <span class="dish__price">29$</span>
+                                </div>
+                            </div>
+
+
+                            <p class="dish__prameter text">Meat, Potatoes, Rice, Tomatoe</p>
+                            <button class="order">Order now</button>
+                            <button class="add__card">Add to card</button>
+                        </div>
+
+                        <div class="col-md-12 col-lg-6">
+                            <div class="dish__img" style="background-image: url('./img/food-3.webp  ');"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 food__item">
+                    <div class="row g-0 dish__item--reverse dish__item showtotop dl-08">
+
+                        <div class="col-md-12 col-lg-6 dish__desc">
+                            <div class="row g-0">
+                                <div class="col-8">
+                                    <h3 class="dish__name">Grilled Beef with potatoes</h3>
+                                </div>
+                                <div class="col" style="text-align: right;">
+                                    <span class="dish__price">29$</span>
+                                </div>
+                            </div>
+
+
+                            <p class="dish__prameter text">Meat, Potatoes, Rice, Tomatoe</p>
+                            <button class="order">Order now</button>
+                            <button class="add__card">Add to card</button>
+                        </div>
+                        <div class="col-md-12 col-lg-6">
+                            <div class="dish__img" style="background-image: url('./img/food-4.webp  ');"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 food__item">
+                    <div class="row g-0 dish__item showtotop dl-1">
+                        <div class="col-md-12 col-lg-6">
+                            <div class="dish__img" style="background-image: url('./img/food-5.webp');"></div>
+                        </div>
+                        <div class="col-md-12 col-lg-6 dish__desc">
+                            <div class="row g-0">
+                                <div class="col-8">
+                                    <h3 class="dish__name">Grilled Beef with potatoes</h3>
+                                </div>
+                                <div class="col" style="text-align: right;">
+                                    <span class="dish__price">29$</span>
+                                </div>
+                            </div>
+
+
+                            <p class="dish__prameter text">Meat, Potatoes, Rice, Tomatoe</p>
+                            <button class="order">Order now</button>
+                            <button class="add__card">Add to card</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 food__item">
+                    <div class="row g-0 dish__item showtotop dl-12">
+                        <div class="col-md-12 col-lg-6">
+                            <div class="dish__img" style="background-image: url('./img/food-6.webp');">
+                            </div>
+                        </div>
+                        <div class="col-md-12 col-lg-6 dish__desc">
+                            <div class="row g-0">
+                                <div class="col-8">
+                                    <h3 class="dish__name">Grilled Beef with potatoes</h3>
+                                </div>
+                                <div class="col" style="text-align: right;">
+                                    <span class="dish__price">29$</span>
+                                </div>
+                            </div>
+
+
+                            <p class="dish__prameter text">Meat, Potatoes, Rice, Tomatoe</p>
+                            <button class="order">Order now</button>
+                            <button class="add__card">Add to card</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- chef -->
+    <section class="item Chef">
+        <div class="container">
+            <div class="row m-bottom-40">
+                <div class="col-md-12 " style="text-align: center;">
+                    <div class="heading__section showtotop">
+                        <div class="title" style=>Chef</div>
+                        <div class="sub" style="text-align: center; font-weight: 900;">Our Master Chef </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-3 col-sm-6 col-12">
+                    <div class="chef__img showtotop dl-02" style="background-image: url('img/chef1.webp');"></div>
+                    <div class="chef__desc showtotop dl-02">
+                        <h3 class="chef__name">John Smooth</h3>
+                        <p class="chef__position text " style=" margin-bottom: 12px ; opacity: 0.6;"> Restaurant Owner
+                        </p>
+                        <ul class="chef__contact">
+                            <li class=" showtotop dl-02"> <i class="fa-brands fa-twitter"></i> </li>
+                            <li class=" showtotop dl-04"> <i class="fa-brands fa-instagram"></i> </li>
+                            <li class=" showtotop dl-06"> <i class="fa-brands fa-google"></i> </li>
+                            <li class=" showtotop dl-08"> <i class="fa-brands fa-facebook"></i> </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 col-12">
+                    <div class="chef__img showtotop dl-04" style="background-image: url('img/chef2.webp');"></div>
+                    <div class="chef__desc showtotop dl-04">
+                        <h3 class="chef__name">John Smooth</h3>
+                        <p class="chef__position text " style=" margin-bottom: 12px ; opacity: 0.6;"> Restaurant Owner
+                        </p>
+                        <ul class="chef__contact">
+                            <li class=" showtotop dl-02"> <i class="fa-brands fa-twitter"></i> </li>
+                            <li class=" showtotop dl-04"> <i class="fa-brands fa-instagram"></i> </li>
+                            <li class=" showtotop dl-06"> <i class="fa-brands fa-google"></i> </li>
+                            <li class=" showtotop dl-08"> <i class="fa-brands fa-facebook"></i> </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 col-12">
+                    <div class="chef__img showtotop dl-06" style="background-image: url('img/chef3.webp');"></div>
+                    <div class="chef__desc showtotop dl-06">
+                        <h3 class="chef__name">John Smooth</h3>
+                        <p class="chef__position text " style=" margin-bottom: 12px ; opacity: 0.6;"> Restaurant Owner
+                        </p>
+                        <ul class="chef__contact">
+                            <li class=" showtotop dl-02"> <i class="fa-brands fa-twitter"></i> </li>
+                            <li class=" showtotop dl-04"> <i class="fa-brands fa-instagram"></i> </li>
+                            <li class=" showtotop dl-06"> <i class="fa-brands fa-google"></i> </li>
+                            <li class=" showtotop dl-08"> <i class="fa-brands fa-facebook"></i> </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 col-12">
+                    <div class="chef__img showtotop dl-08" style="background-image: url('img/chef4.webp');"></div>
+                    <div class="chef__desc showtotop dl-08">
+                        <h3 class="chef__name">John Smooth</h3>
+                        <p class="chef__position text " style=" margin-bottom: 12px ; opacity: 0.6;"> Restaurant Owner
+                        </p>
+                        <ul class="chef__contact">
+                            <li class=" showtotop dl-02"> <i class="fa-brands fa-twitter"></i> </li>
+                            <li class=" showtotop dl-04"> <i class="fa-brands fa-instagram"></i> </li>
+                            <li class=" showtotop dl-06"> <i class="fa-brands fa-google"></i> </li>
+                            <li class=" showtotop dl-08"> <i class="fa-brands fa-facebook"></i> </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- book table -->
+    <section class="item booking"
+        style="background-image: url(./img/bg_3.jpg.webp); background-attachment: fixed;">
+        <div class="container ">
+            <div class="row m-bottom-40">
+                <div class="col-xl-7 showtotop dl-02"
+                    style="text-align: center; background-color:#fff; padding: 24px 48px 48px 48px;">
+                    <div class="heading__section showtotop">
+                        <div class="title" style=>Chef</div>
+                        <div class="sub" style="text-align: center; font-weight: 900; text-align: center;">Make
+                            Reservation</div>
+                    </div>
+                    <div class="row g-0">
+                        <div class="col-md-6">
+                            <div class="form__group">
+                                <label for="">Name </label>
+                                <input type="text" placeholder="Your Name">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form__group">
+                                <label for="">Email </label>
+                                <input type="email" placeholder="Your Name">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form__group">
+                                <label for="">Phone </label>
+                                <input type="number" placeholder="Your Name">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form__group">
+                                <label for="">Date </label>
+                                <input type="date" placeholder="Your Name">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form__group">
+                                <label for="">Time </label>
+                                <input type="time" placeholder="Your Name">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form__group">
+                                <label for="">Person </label>
+                                <select>
+                                    <option value="">Person</option>
+                                    <option value="">1</option>
+                                    <option value="">2</option>
+                                    <option value="">3</option>
+                                    <option value="">4+</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <button class="order" style="padding: 16px 48px; margin: 16px 0;">Make a Reservation</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- customer -->
+    <section class="item customers" style="overflow-x:hidden ;">
+        <div class="container">
+            <div class="row m-bottom-40">
+                <div class="col-md-12 " style="text-align: center;">
+                    <div class="heading__section showtotop">
+                        <div class="title" style=>Testimony</div>
+                        <div class="sub" style="text-align: center; font-weight: 900;">Happy Customer</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row ">
+                <div class="col-md-4 showtotop dl-02"
+                    style="display: flex; flex-direction: column;  align-items: center; text-align: center;">
+                    <div class="customer"
+                        style=" background-image: url(./img/custumer1.webp); width: 130px; height: 130px;">
+
+                        <i class="fa-solid fa-quote-right"></i>
+                    </div>
+                    <p class="customer__desc text ">
+                        Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there
+                        live the blind texts.
+                    </p>
+                    <h4 class="customer__name">Rose Henderson</h4>
+                    <span class="customer__posiotion">Customer</span>
+                </div>
+                <div class="col-md-4 showtotop dl-04"
+                    style="display: flex; flex-direction: column;  align-items: center; text-align: center;">
+                    <div class="customer"
+                        style=" background-image: url(./img/custumer1.webp); width: 130px; height: 130px;">
+
+                        <i class="fa-solid fa-quote-right"></i>
+                    </div>
+                    <p class="customer__desc text">
+                        Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there
+                        live the blind texts.
+                    </p>
+                    <h4 class="customer__name">Rose Henderson</h4>
+                    <span class="customer__posiotion">Customer</span>
+                </div>
+                <div class="col-md-4 showtotop dl-06"
+                    style="display: flex; flex-direction: column;  align-items: center; text-align: center;">
+                    <div class="customer"
+                        style=" background-image: url(./img/custumer1.webp); width: 130px; height: 130px;">
+
+                        <i class="fa-solid fa-quote-right"></i>
+                    </div>
+                    <p class="customer__desc text">
+                        Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there
+                        live the blind texts.
+                    </p>
+                    <h4 class="customer__name">Rose Henderson</h4>
+                    <span class="customer__posiotion">Customer</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- blog -->
+    <section class="item Chef" style="overflow-x:hidden ;">
+        <div class="container">
+            <div class="row m-bottom-40">
+                <div class="col-md-12 " style="text-align: center;">
+                    <div class="heading__section showtotop ">
+                        <div class="title " style=>Blog</div>
+                        <div class="sub" style="text-align: center; font-weight: 900;">Recent Posts</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row ">
+                <div class="col-md-4 showtotop dl-02">
+                    <a href="">
+                        <div class="blog_img"
+                            style="background-image: url(./img/blog1.webp); height: 300px; background-position: center; background-size: cover;">
+                        </div>
+                    </a>
+                    <div class="blog__content">
+                        <p class="blog__date text">Sept. 06, 2019 Admin</p>
+                        <h4 style="font-weight: 600;"> Taste the delicious foods in Asia</h5>
+                            <p style="display: inline-block; font-size: 14px; ">Read more</p> <span
+                                style="float: right; color: #b7b7b7;"> <i class="fa-solid fa-comment"></i> 3
+                            </span>
+                    </div>
+                </div>
+
+                <div class="col-md-4 showtotop dl-04">
+                    <a href="">
+                        <div class="blog_img"
+                            style="background-image: url(./img/blog2.webp); height: 300px; background-position: center; background-size: cover;">
+                        </div>
+                    </a>
+                    <div class="blog__content">
+                        <p class="blog__date text">Sept. 06, 2019 Admin</p>
+                        <h4 style="font-weight: 600;"> Taste the delicious foods in Asia</h5>
+                            <p style="display: inline-block; font-size: 14px; ">Read more</p> <span
+                                style="float: right; color: #b7b7b7;"> <i class="fa-solid fa-comment"></i> 3
+                            </span>
+                    </div>
+                </div>
+
+                <div class="col-md-4 showtotop dl-06">
+                    <a href="">
+                        <div class="blog_img"
+                            style="background-image: url(./img/blog3.webp); height: 300px; background-position: center; background-size: cover;">
+                        </div>
+                    </a>
+                    <div class="blog__content">
+                        <p class="blog__date text">Sept. 06, 2019 Admin</p>
+                        <h4 style="font-weight: 600;"> Taste the delicious foods in Asia</h5>
+                            <p style="display: inline-block; font-size: 14px; ">Read more</p> <span
+                                style="float: right; color: #b7b7b7;"> <i class="fa-solid fa-comment"></i> 3
+                            </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- footer -->
+    <section class=" footer " style="background-color:#000 ; ">
+        
+    </section>
+
+    <!-- modal -->
+    <div class="modal">
+
+        
+    </div>
+
+    <!-- shopping cart -->
+    <div class="shopping__container ">
+        <div class="shopping__cart card">
+            <h1 class="" style="font-family: Great Vibes, cursive ; color: #C8A97E; font-size: 60px; text-align: center;">
+                Feliciano</h1>
+
+            
+            <ul class="shopping__list ">
+                
+            </ul>
+
+            <div  style="color:#fff ; font-size: 22px;">
+                <span>Total: </span> <span class="shopping__cart__total" >0</span>
+            </div>
+            <button class="modal__order" style="width: 100%; padding: 10px 0; color: #fff;"
+            target="_blank">
+            Order</button>
+
+            <div class="shopping__close">
+                    <i class="fa-solid fa-xmark"></i>
+            </div>
+        </div>
+    </div>
+
+ 
+
+
+</body>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+    integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+    crossorigin="anonymous"></script>
+<script src="./js/count.js"></script>
+<script src="./js/navbar.js"></script>
+<script src="./js/history.js"></script>
+<script src="./js/shopingCard.js"></script>
+<script src="./js/modal.js"></script>
+<script src="./js/modal2.js"></script>
+<script src="./js/top.js"></script>
+<script src="./js/footer.js"></script>
+</html>
