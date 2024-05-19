@@ -240,7 +240,7 @@ function RenderListDish () {
   //Load lại thì tiến hành lấy từ local để cập nhật
   var index=document.querySelectorAll('.shopping__item__input');
   var count1 = [];
-  if(localStorage.getItem('count')!='')
+  if(localStorage.getItem('count'))
     count1 = localStorage.getItem('count').split(',');
   index.forEach((mem, i) => {
     mem.value = parseInt(count1[i]);
