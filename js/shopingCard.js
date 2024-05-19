@@ -4,17 +4,21 @@ const shoppingClose = document.querySelector(".shopping__close");
 var shoppingContainer = document.querySelector(".shopping__container");
 
 const listDishItem = document.querySelectorAll(".dish__item");
-//console.log(listDishItem);
 
 const btnAddCart = document.querySelectorAll(".add__card");
-//console.log(listAddCard);
 
-
-
+RenderListDish ();
+var indexCart=document.querySelectorAll('.shopping__list li').length;
+var indexArr=[];
 
 let listCard = document.querySelector(".listCard");
 let total = document.querySelector(" .checkOut .total");
 let shoppingListItem;
+// Set lại giá trị value cho các thẻ input
+const cartArr=document.querySelectorAll('.shopping__item__input');
+cartArr.forEach((mem,index)=>{
+  indexArr[index]=mem.value;
+})
 const listDish = [];
 
 // Lặp qua mỗi phần tử và trích xuất thông tin
@@ -27,7 +31,7 @@ listDishItem.forEach((dishItem, index) => {
 
   // Lấy giá
   const price = dishItem.querySelector(".dish__price").textContent.trim();
-//console.log(lisDishPrice);sh__price").textContent.trim();
+
 
   // Thêm thông tin vào mảng listDish
   listDish.push({
@@ -39,7 +43,6 @@ listDishItem.forEach((dishItem, index) => {
 });
 
 shoppingIcon.addEventListener("click", () => {
-  console.log(1)
   shoppingContainer.style.display = "block";
   setTimeout(() => {
     shoppingCart.classList.add("active");
@@ -47,7 +50,7 @@ shoppingIcon.addEventListener("click", () => {
 
 });
 
-console.log(shoppingClose)
+
 shoppingClose.addEventListener("click", () => {
   shoppingCart.classList.remove("active");
   setTimeout(() => {
@@ -57,9 +60,9 @@ shoppingClose.addEventListener("click", () => {
 
 btnAddCart.forEach( (cartItem , index) => {
   cartItem.addEventListener('click', () => {
-    var cartImg = listDish[index].image;
-    var carttName = listDish[index].name;
-    var cartPrice = listDish[index].price;
+    const cartImg = listDish[index].image;
+    const carttName = listDish[index].name;
+    const cartPrice = listDish[index].price;
     AddCart(cartImg , carttName ,cartPrice )
     
   } ) ;
@@ -78,9 +81,6 @@ function AddCart (cartImg , carttName ,cartPrice ) {
          }
      }
 
-     
-    console.log(shoppingList);
-
      // khi nào add đc vào giỏ hàng thì mới có sound effect
      
      soundEffect();
@@ -92,7 +92,7 @@ function AddCart (cartImg , carttName ,cartPrice ) {
                 <h3  style="font-size: 15px; margin: 0; color: #fff;">${carttName}</h3>
             </span>
             <div class="" style="display: flex; justify-content: space-between;">
-                <input class="shopping__item__input" type="number" value="1" min="1" style="width: 40px; height: 28px;border: none; background-color: transparent; color: #fff;">
+                <input class="shopping__item__input" type="number" value="1"  min="1" style="width: 40px; height: 28px;border: none; background-color: transparent; color: #fff;">
                 <span class="shopping__item__price" style="color: #fff;"> ${cartPrice} </span>
             </div>
         </div>
@@ -101,6 +101,19 @@ function AddCart (cartImg , carttName ,cartPrice ) {
     `
   var shoppingList = document.querySelector('.shopping__list');
   shoppingList.appendChild(li);
+
+  // var input = document.querySelectorAll('.shopping__item__input');
+  // input.forEach((inputItem , index) => {
+  //   inputItem.value = '1';
+  // });
+  // shoppingListItem = document.querySelectorAll('.shopping__list li');
+  // shoppingListItem.forEach((mem,index)=>{
+    //Thêm vào thù tiến hành thêm vào mảng tạm
+    indexArr[indexCart++]='1';
+    localStorage.setItem('count',indexArr);
+  // })
+
+  SaveListDish ();
   cartTotal();
   deleteCart();
   inputChange ();
@@ -118,26 +131,70 @@ function cartTotal () {
     total = total + price * input;
   }
   totalShopping.innerHTML = total + '$';
+  SaveTotalDish ();
 }
 
 
+// function deleteCart(){
+//   var deleteBtn = document.querySelectorAll('.delete');
+
+//   deleteBtn.forEach((btnItem , index) => {
+//     var shoppingListItem = document.querySelectorAll('.shopping__list li');
+//     btnItem.addEventListener('click', function(event) {
+//       indexCart--;
+//       if(indexCart<0)
+//         indexCart=0;
+//       indexArr.splice(index, 1); 
+//       localStorage.setItem('count',indexArr);
+//       shoppingListItem[index].remove();
+//       cartTotal ();
+//       changeQuantity ();
+//       SaveListDish ();   
+//       console.log(1) 
+//       console.log(shoppingListItem)
+//       event.preventDefault();
+//       event.stopPropagation();
+//     })
+
+//   })
+// }
 function deleteCart(){
   var deleteBtn = document.querySelectorAll('.delete');
+
   deleteBtn.forEach((btnItem , index) => {
+    btnItem.removeEventListener('click', deleteCartItem); // Xóa sự kiện xóa cũ trước khi gán lại
+
     var shoppingListItem = document.querySelectorAll('.shopping__list li');
-    btnItem.addEventListener('click', () => {
-      shoppingListItem[index].remove();
-      cartTotal ();
-      changeQuantity ()
-    })
-  })
+    btnItem.addEventListener('click', deleteCartItem); // Gán sự kiện xóa mới
+  });
 }
+
+function deleteCartItem(event) {
+  var shoppingListItem = document.querySelectorAll('.shopping__list li');
+  var index = Array.from(shoppingListItem).indexOf(event.currentTarget.parentElement.parentElement);
+  shoppingListItem[index].remove();
+  cartTotal ();
+  changeQuantity ();
+  SaveListDish ();   
+  indexCart--;
+  if(indexCart<0)
+    indexCart=0;
+  indexArr.splice(index, 1); 
+  localStorage.setItem('count',indexArr);
+}
+
 
 
 function inputChange () {
   var input = document.querySelectorAll('.shopping__item__input');
   input.forEach((inputItem , index) => {
-    inputItem.addEventListener('change', () => {
+    inputItem.addEventListener('change', (event) => {
+      event.stopPropagation();
+      valueChange = inputItem.value;
+      input[index] = valueChange;// Gán lại giá trị value cho các thẻ input khi có thay đổi
+      indexArr[index]=valueChange;
+      localStorage.setItem('count',indexArr);
+      SaveListDish ();
       cartTotal ();
     });
   });
@@ -156,3 +213,57 @@ function soundEffect () {
   menuShopping.classList.add('effectShopping');
 }
 
+
+// lưu vào list dish vào trong localstorage 
+
+function SaveListDish () {
+  let listDishs = document.querySelector('.shopping__list');
+  localStorage.setItem('shopping__list',listDishs.innerHTML);
+}
+
+
+function SaveTotalDish () {
+  var value = document.querySelector('.shopping__cart__total');
+  localStorage.setItem('total',value.innerHTML);
+
+}
+
+
+function RenderListDish () {
+  let list = localStorage.getItem('shopping__list');
+  let listDishs = document.querySelector('.shopping__list');
+  listDishs.innerHTML = list;
+  changeQuantity ();
+  cartTotal();
+  deleteCart();
+  inputChange ();
+  //Load lại thì tiến hành lấy từ local để cập nhật
+  var index=document.querySelectorAll('.shopping__item__input');
+  var count1 = [];
+  count1 = localStorage.getItem('count').split(',');
+  index.forEach((mem, i) => {
+    mem.value = parseInt(count1[i]);
+    index[i].value=mem.value;
+  })
+  cartTotal();
+  var value2 = localStorage.getItem('total');
+  var totalTemp = document.querySelector('.shopping__cart__total');
+  totalTemp.innerHTML = value2;
+}
+
+
+// cartArr.forEach((mem,index)=>{
+//   mem.addEventListener('change',()=>{
+//     cartArr[index].value=mem.value;
+//     indexArr[index]=mem.value;
+//     console.log(indexArr);
+//     localStorage.setItem('count',indexArr);
+//   })
+// })
+// var count=1;
+// window.addEventListener('af', function(event) {
+//   var shoppingListItem1 = document.querySelectorAll('.shopping__list li');
+//     localStorage.setItem('count12',shoppingListItem1.length);
+//     this.localStorage.setItem('checkLoad','true');
+//     count=5;
+//   })

@@ -44,7 +44,7 @@
         max-width: 720px !important;
     }
 
-    .about {
+    .about.index {
         padding-top: 260px;
     }
 
@@ -126,7 +126,7 @@
 
 
 @media (width <= 768px) {
-    .about {
+    .about.index {
         margin-top: 90vh;
     }
     .container {

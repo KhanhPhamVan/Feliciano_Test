@@ -25,7 +25,7 @@ topElement.innerHTML =
                     </span>
                 </div>
                 <div class="col-md-5 top__item fz-14 ">
-                    <span style="float:right">Open hours: Monday - Sunday 8:00AM - 9:00PM</span>
+                    <span style="float:right">Giờ mở cửa: Thứ hai - Chủ nhật 8:00AM - 9:00PM</span>
                 </div>
             </div>
         </div>

@@ -5,9 +5,7 @@ footerContent.innerHTML = `
                 <div class="row" style="margin-bottom: 48px;">
                     <div class="col-xl-3 col-md-6 col-12" style="color: #fff;">
                         <h4 class="footer__heading">Feliciano</h4>
-                        <p class="text" style="color: #acabab;"> Far far away, behind the word mountains, far from the
-                            countries Vokalia and
-                            Consonantia, there live the blind texts.</p>
+                        <p class="text" style="color: #acabab;"> Chúng tôi luôn ở đây để phục vụ bạn.</p>
                         <ul class="footer__media">
                             <li class="showtotop ">
                                 <i class="fa-brands fa-twitter"></i>
@@ -21,11 +19,11 @@ footerContent.innerHTML = `
                         </ul>
                     </div>
                     <div class="col-xl-3 col-md-6 col-12" style="color: #fff;">
-                        <h4 class="footer__heading">Open hours</h4>
-                        <span>monday</span> <span>9:00 - 24:00</span>
-                        <span>monday</span> <span>9:00 - 24:00</span>
-                        <span>monday</span> <span>9:00 - 24:00</span>
-                        <span>monday</span> <span>9:00 - 24:00</span>
+                        <h4 class="footer__heading">Giờ mở cửa</h4>
+                        <span>Thứ hai</span> <span>8:00 - 9:00</span>
+                        <span>Thứ ba</span> <span>8:00 - 9:00</span>
+                        <span>Thứ tư</span> <span>8:00 - 9:00</span>
+                        <span>Thứ năm</span> <span>8:00 - 9:00</span>
                     </div>
 
                     <div class="col-xl-3 col-md-6 col-12" style="color: #fff;">
@@ -59,7 +57,7 @@ footerContent.innerHTML = `
                     </div>
 
                     <div class="col-xl-3 col-md-6 col-12" style="color: #fff;">
-                        <h4 class="footer__heading">Newsletter</h4>
+                        <h4 class="footer__heading">Thư mới</h4>
                         <p style="color: #acabab;">Far far away, behind the word mountains, far from the countries.</p>
                         <input type="text" placeholder="Enter email address" class="footer__input">
                         <button class="order" style="width: 100%; line-height: 2;"> Subscribe </button>

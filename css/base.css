@@ -5,6 +5,9 @@
 }
 
 
+* {
+    
+}
 body {
     overflow-x: hidden;
 }
@@ -78,7 +81,7 @@ nav {
     text-decoration: none;
     font-size: 20px;
     font-weight: 900;
-    line-height: 40px;
+    line-height: 56px;
     
 }
 
@@ -112,6 +115,10 @@ nav {
 .nav__item:hover a {
     color: var(--primary-color);
 }
+
+.nav__item.button:hover a {
+    color: var(--white-color);
+}
 .nav__item a {
     color: var(--white-color);
     font-size: 14px;
@@ -123,9 +130,15 @@ nav {
 }
 .nav__item--active a {
     color: var(--primary-color) !important ;
-    transition:  0.3s; /* Thêm transition cho màu chữ */
-    line-height: 32px;
+    transition:  0.3s;
 }
+
+.nav__item--active.button a {
+    color: var(--white-color) !important ;
+    transition:  0.3s;
+}
+
+
 
 .nav__item--active a:hover {
     color: var(--white-color) ;
@@ -139,7 +152,9 @@ li:hover {
     background-color: var(--primary-color) ;
     border-radius: 6px;
 }
-
+.button a:hover {
+    color: #fff!important;
+}
 .slide {
     position: relative;
 }
@@ -276,6 +291,14 @@ body .services .sub {
     line-height: 1.5;
     transition: 0.3s;
     margin-top: 10px;
+}
+.order  a {
+    text-decoration: none;
+    color: var(--white-color);
+}
+
+.order:hover a {
+    color: var(--primary-color);
 }
 
 .add__card:hover,
@@ -452,6 +475,7 @@ body .chef__position text {
 
 
 .nav-fiexd-top {
+    height: 56px;
     position: fixed;
     top: 0;
     width: 100%;
@@ -493,6 +517,10 @@ body .chef__position text {
 
 .nav-fiexd-top .button {
     border-radius: 0px;
+}
+
+.nav-fiexd-top .button a {
+    color: #fff;
 }
 
 .nav-fiexd-top .nav__item:hover a {
@@ -624,7 +652,8 @@ body .chef__position text {
     position: relative;
     padding: 20px 20px;
     transition: 0.5s;
-    overflow-y: scroll;
+    /* overflow-y: scroll; */
+    overflow: hidden;
 }
 
 .shopping__cart.active {
@@ -654,7 +683,9 @@ body .chef__position text {
 .shopping__list {
     margin: 0;
     padding: 0;
-    list-style-type: none;
+    max-height: 600px;
+    overflow-x:hidden;
+    scroll-behavior: none;
 }
 
 .shopping__item {

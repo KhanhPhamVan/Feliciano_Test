@@ -17,5 +17,3 @@ function hideModal() {
     isModal = false ;   
 }
 
-
-
