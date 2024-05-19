@@ -757,9 +757,9 @@ main .modal.hidden{
         margin-top: 1.8rem;
     }
 
-    aside .top div#close_btn {
+    /* aside .top div#close_btn {
         display: block;
-    }
+    } */
 
     /* main .table {
         width: 70%;
@@ -777,7 +777,7 @@ main .modal.hidden{
       }
 }
 
-@media screen and (max-width:768px) {
+@media screen and (max-width:980px) {
     .container {
         width: 100%;
         grid-template-columns: repeat(1, 1fr);
@@ -865,9 +865,9 @@ main .modal.hidden{
         display: block;
     }
 
-    main .table {
+    /* main .table {
         width: 60%;
-    }
+    } */
 
     main .add_modal_body .add_avt {
         width: 13rem;

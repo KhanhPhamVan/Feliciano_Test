@@ -32,6 +32,7 @@
     --clr-black:white;
     --clr-card:black;
 }
+
 *{
     margin:0;
     padding:0;
@@ -63,7 +64,6 @@ body{
     display:grid;
     width:98%;
     gap:1.8rem;
-    /* grid-template-columns:14rem auto 14rem; */
     grid-template-columns:14rem auto 14rem;
     margin:0 8px;
 }
