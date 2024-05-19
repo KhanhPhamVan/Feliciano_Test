@@ -104,6 +104,7 @@ small {
     height: 2.8rem;
     border-radius: 50%;
     overflow: hidden;
+    margin-right: 1rem;
 }
 
 .text-muted {
@@ -542,7 +543,7 @@ main .table_header {
 
 .table_section table {
     width: 100%;
-    /* min-width: 1000px; */
+    min-width: 1000px;
     table-layout: fixed;
     border-collapse: collapse;
 }
@@ -777,7 +778,7 @@ main .modal.hidden{
 
 }
 
- @media screen and (max-width:980px) {
+ @media screen and (max-width:768px) {
     .container {
         width: 100%;
         grid-template-columns: repeat(1, 1fr);
@@ -848,7 +849,7 @@ main .modal.hidden{
     main .top .theme-toggler {
         width: 4.4rem;
         position: absolute;
-        left: 55%;
+        left: 50%;
         margin-top: 0;
     }
 
@@ -865,9 +866,9 @@ main .modal.hidden{
         display: block;
     }
 
-     /* main .table {
-        width: 60%;
-    }  */
+    main .table {
+        width: 100vw;
+    }
 
     main .add_modal_body .add_avt {
         width: 13rem;

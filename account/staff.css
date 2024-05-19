@@ -94,6 +94,7 @@ small{
     height:2.8rem;
     border-radius:50%;
     overflow:hidden;
+    margin-right: 1rem;
 }
 .text-muted{
     color:var(--clr-into-dark);
@@ -754,7 +755,7 @@ main .add_modal.hidden{
     .right .top .theme-toggler{
         width:4.4rem;
         position:absolute;
-        left:55%;
+        left:50%;
         margin-top: 0;
     }
     .right .recent_updates{
