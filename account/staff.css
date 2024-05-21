@@ -415,7 +415,9 @@ main .group_staff .staff:last-child .add_modal{
 main .group_staff .staff:last-child .add_modal:hover{
      box-shadow:var(--box-shadow);
 }
-
+main .group_staff .name_title{
+    margin-top: 1rem;
+}
 main .add_modal_inner{
     position:relative;
     width:35rem;
