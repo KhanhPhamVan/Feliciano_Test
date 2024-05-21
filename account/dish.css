@@ -629,7 +629,7 @@ main .table_header {
 .delete_modal_inner{
     position:relative;
     width:30rem;
-    top:20%;
+    top:40%;
     margin:auto;
     background: var(--clr-white);
     overflow:hidden;
@@ -841,9 +841,10 @@ main .modal.hidden{
         display: block;
     }
 
-    main .profile {
+    main .top .profile {
         position: absolute;
         right: 0;
+        gap: 1rem;
     }
 
     main .top .theme-toggler {
@@ -938,6 +939,10 @@ main .modal.hidden{
     }
     .modal .modal_inner{
         width:22rem;
-        height:31rem;
+    }
+    .delete_modal_inner
+    {
+        width: 18rem;
+        font-size: 0.6rem;
     }
 } 

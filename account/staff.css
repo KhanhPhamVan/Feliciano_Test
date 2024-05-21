@@ -350,7 +350,7 @@ main .modal{
 main .modal_inner{
     position:relative;
     width:44.4rem;
-    top:20%;
+    top:10%;
     margin:auto;
     background: var(--clr-white);
     overflow:hidden;
@@ -374,10 +374,10 @@ main .modal_body h2{
     color:var(--clr-primary);
     margin-bottom:0.5rem;
 }
-main .modal_body img{
-    width:280px;
-    height:300px;
-    object-fit:cover;
+main .modal_body img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
 }
 main .modal_footer{
     padding:0.9rem;
@@ -644,10 +644,7 @@ main .add_modal.hidden{
         flex-direction:column;
     }
     
-    .modal .modal_inner .modal_body img{
-        width:10rem;
-        height:11rem;
-    }
+
     .modal .modal_inner .modal_body{
         display:flex;
         flex-direction:column;
@@ -656,19 +653,19 @@ main .add_modal.hidden{
         gap:0;
     }
     main .modal_inner{
-    width:12rem;
-    height:30rem;
+        width:22rem;
     }
     main .info span{
     font-size:1rem;
     }
-    main .info h2{
-        font-size:0.5rem;
-        
+    main .modal_body .info h2{
+        text-align: left;
+        font-size: 1.4rem;
     }
     main .modal_footer .close{
     padding:0.25rem 0.5rem;
-    width:3rem;
+    width:7rem;
+    height: 2rem;
     transform:translateY(-1rem) ;
     }
     aside .sidebar .dropdown {
@@ -748,9 +745,11 @@ main .add_modal.hidden{
         padding:30px;
         margin:0 auto;
     }
-    .right .profile{
+    
+    .right .top .profile{
         position:absolute;
         left:70%;
+        gap: 1rem;
     }
     .right .top .theme-toggler{
         width:4.4rem;
@@ -777,9 +776,6 @@ main .add_modal.hidden{
         left:1rem;
     }
      
-    .modal .modal_inner .modal_body img{
-        width:10rem;
-    }
     .modal .modal_inner .modal_body
     {
         display:flex;
@@ -788,27 +784,30 @@ main .add_modal.hidden{
         align-items:center;
         gap:0;
     }
-    main .modal_inner
-    {
-    width:12rem;
-    height:27rem;
+    main .modal_body img {
+        width: 200px;
+        height: 200px;
+        object-fit: cover;
     }
+    
     main .info span
     {
-    font-size:1rem;
+        font-size:1.2rem;
     }
     main .modal_body .info h2{
-        font-size:0.5rem;
+        text-align: left;
+        font-size: 1.4rem;
     }
     main .modal_body .info h2 span{
         margin-top:-5rem;
     }
     main .modal_footer .close{
     padding:0.2rem 0.3rem;
-    width:2rem;
+    width:7rem;
+    height: 2rem;
     transform:translateY(-2rem) ;
-    font-size:5px;
-    border-radius:0.2rem;
+    font-size:1rem;
+    border-radius:var(--border-radius-1);
     }
     main .add_modal_footer .add_done{
         padding:0.2rem 0.3rem;

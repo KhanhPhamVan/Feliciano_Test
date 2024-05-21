@@ -311,7 +311,7 @@ main .add_modal:hover {
 main .add_modal_inner {
     position: relative;
     width: 35rem;
-    top: 20%;
+    top: 40%;
     margin: auto;
     background: var(--clr-white);
     overflow: hidden;
@@ -461,7 +461,7 @@ main .theme-toggler span.active {
 
 main .top .profile {
     display: flex;
-    gap: 2rem;
+    gap: 1rem;
     text-align: center;
 }
 
@@ -629,7 +629,7 @@ main .table_header {
 .delete_modal_inner{
     position:relative;
     width:30rem;
-    top:20%;
+    top:40%;
     margin:auto;
     background: var(--clr-white);
     overflow:hidden;
@@ -911,9 +911,21 @@ main .modal.hidden{
     main .add_modal_body .add_avt input {
         line-height: 10rem;
     }
+    main .modal_body img
+    {
+        width: 200px;
+        height: 200px;
+        object-fit: cover;
+    }
 
     main .add_info input {
         margin-left: 0;
+    }
+
+    main .info h2
+    {
+        margin-top: 0;
+        text-align: left;
     }
 
     main .add_modal_footer .add_done {
@@ -938,6 +950,11 @@ main .modal.hidden{
     }
     .modal .modal_inner{
         width:22rem;
-        height:31rem;
     }
+    .delete_modal_inner
+    {
+        width: 18rem;
+        font-size: 0.6rem;
+    }
+
 }

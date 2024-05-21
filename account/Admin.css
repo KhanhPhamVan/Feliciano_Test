@@ -684,9 +684,10 @@ main .recent_orders a {
         margin: 0 auto;
     }
 
-    .right .profile {
+    .right .top .profile {
         position: absolute;
         left: 70%;
+        gap: 1rem;
     }
 
     .right .top .theme-toggler {
