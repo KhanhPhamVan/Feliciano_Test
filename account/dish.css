@@ -689,7 +689,7 @@ main .modal{
 main .modal_inner{
     position:relative;
     width:44.4rem;
-    top:10%;
+    top:20%;
     margin:auto;
     background: var(--clr-white);
     overflow:hidden;
@@ -711,7 +711,7 @@ main .modal_body{
 }
 main .modal_body h2{
     color:var(--clr-primary);
-    font-size: 1.2rem;
+    font-size: 1.4rem;
 }
 main .modal_body img{
     width:250px;
@@ -737,6 +737,7 @@ main .modal_footer .close{
 main .info h2{
     text-align:left;
     padding-left:5px;
+    margin-bottom: 0.8rem;
 }
 main .modal.hidden{
     display:none;
@@ -775,7 +776,10 @@ main .modal.hidden{
     aside .sidebar .dropdown div ul li:last-child{
         margin-top: 1rem;
       }
-
+    main .modal_body h2 {
+        color: var(--clr-primary);
+        font-size: 1.2rem;
+    }
 }
 
  @media screen and (max-width:768px) {
@@ -840,7 +844,9 @@ main .modal.hidden{
     aside .top div#close_btn {
         display: block;
     }
-
+    main .info h2 {
+        margin-bottom: 0;
+    }
     main .top .profile {
         position: absolute;
         right: 0;
@@ -870,7 +876,9 @@ main .modal.hidden{
     main .table {
         width: 100vw;
     }
-
+    main .modal_inner{
+        top: 10%;
+    }
     main .add_modal_body .add_avt {
         width: 13rem;
         height: 10rem;
@@ -912,7 +920,10 @@ main .modal.hidden{
     main .add_modal_body .add_avt input {
         line-height: 10rem;
     }
-
+    main .modal_body h2 {
+        color: var(--clr-primary);
+        font-size: 1.2rem;
+    }
     main .add_info input {
         margin-left: 0;
     }
