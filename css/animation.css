@@ -74,6 +74,13 @@
     }100%{
         transform: scale(1);
     }
+    /* 0%{
+        transform: scaleY(1);
+    }50%{
+        transform: scaleY(1.5);
+    }100%{
+        transform: scaleY(1);
+    } */
 }
 
 

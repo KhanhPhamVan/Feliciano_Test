@@ -1,4 +1,4 @@
-const shoppingIcon = document.querySelector(".shopping__cart__icon ");
+const shoppingIcon = document.querySelectorAll(".shopping__cart__icon ");
 const shoppingCart = document.querySelector(".shopping__cart");
 const shoppingClose = document.querySelector(".shopping__close");
 var shoppingContainer = document.querySelector(".shopping__container");
@@ -42,13 +42,25 @@ listDishItem.forEach((dishItem, index) => {
   });
 });
 
-shoppingIcon.addEventListener("click", () => {
-  shoppingContainer.style.display = "block";
-  setTimeout(() => {
-    shoppingCart.classList.add("active");
-  }, 100);
+shoppingIcon.forEach((item,index)=>{
+  item.addEventListener("click", () => {
+    shoppingContainer.style.display = "block";
+    setTimeout(() => {
+      shoppingCart.classList.add("active");
+    }, 100);
+    console.log(1);
+  });
+})
 
-});
+
+// const cartTest=document.querySelector('#cartTest');
+// cartTest.addEventListener("click", () => {
+//   shoppingContainer.style.display = "block";
+//   setTimeout(() => {
+//     shoppingCart.classList.add("active");
+//   }, 100);
+//   console.log(1);
+// });
 
 
 shoppingClose.addEventListener("click", () => {
@@ -76,7 +88,7 @@ function AddCart (cartImg , carttName ,cartPrice ) {
      for (var i = 0; i < shoppingListItem.length; i++) {
          var shoppingName  = document.querySelectorAll('.shopping__item__name h3'); 
          if(shoppingName[i].innerText == carttName) {
-             alert('sản phẩm cùa bạn đã có trong của hàng');
+             alert('Sản phẩm của bạn đã có trong của hàng');
              return; 
          }
      }
@@ -201,16 +213,25 @@ function inputChange () {
 }
 
 function changeQuantity () {
-  var quantity = document.querySelector('.shopping__cart__icon span');
+  var quantity = document.querySelectorAll('.shopping__cart__icon span');
   var shoppingListItem = document.querySelectorAll('.shopping__list li');
-  quantity.innerText = shoppingListItem.length ;
+  quantity.forEach((item,index)=>{
+    item.innerText = shoppingListItem.length ;
+  })
+  
 }
 
 function soundEffect () {
   var audio = new Audio('./img/thanhCong.mp3');
   audio.play();
-  var menuShopping = document.querySelector('.shopping__cart__icon');
-  menuShopping.classList.add('effectShopping');
+  var menuShopping = document.querySelectorAll('.shopping__cart__icon');
+  menuShopping.forEach((item,index)=>{
+    item.classList.add('effectShopping');
+    setTimeout(function() {
+      item.classList.remove('effectShopping');
+    }, 1000);
+  })
+  console.log(1);
 }
 
 
