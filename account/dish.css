@@ -712,7 +712,6 @@ main .modal_body{
 }
 main .modal_body h2{
     color:var(--clr-primary);
-    margin-bottom:0.5rem;
 }
 main .modal_body img{
     width:250px;
@@ -721,6 +720,7 @@ main .modal_body img{
 }
 main .modal_footer{
     padding:0.9rem;
+    padding-top: 0;
     text-align:right;
 }
 main .modal_footer .close{
@@ -732,7 +732,7 @@ main .modal_footer .close{
     outline:none;
     cursor:pointer;
     width:7rem;
-    height: 3rem;
+    height: 2rem;
 }
 main .info h2{
     text-align:left;
