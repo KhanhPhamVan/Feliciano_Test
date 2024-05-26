@@ -109,7 +109,7 @@ function addModal( modalImg,modalName ,modalDesc,modalPrice) {
                                 <div class="row">
                                     <div class="col-12">
                                         <div class="modal__desc" style="margin-bottom: 10px; font-weight: 600;">
-                                            <span> Description : </span> <span class="modal__dish__prameter text"
+                                            <span> Mô tả : </span> <span class="modal__dish__prameter text"
                                                 style="font-weight: 500;">${modalDesc}</span>
                                         </div>
                                     </div>
@@ -118,7 +118,7 @@ function addModal( modalImg,modalName ,modalDesc,modalPrice) {
                                         <div class="price " style="margin-bottom: 10px;">
                                             <div class=""
                                                 style=" display: inline-block; width: 98px; font-weight: 600; ">
-                                                <span> Price </span> <span style="float: right;"> : </span>
+                                                <span> Giá </span> <span style="float: right;"> : </span>
                                             </div>
                                             <span class="modal__dish__price" >${modalPrice} </span>
                                         </div>
@@ -128,7 +128,7 @@ function addModal( modalImg,modalName ,modalDesc,modalPrice) {
                                         <div class="quantity" style="margin-bottom: 10px;">
                                             <div class=""
                                                 style=" display: inline-block; width: 98px; font-weight: 600;">
-                                                <span> Quantity </span> <span style="float: right;"> : </span>
+                                                <span> Số lượng </span> <span style="float: right;"> : </span>
                                             </div>
                                             <input class="quantity__input" type="number" placeholder="Nhập vào số lượng"
                                                 value="1" min="0">
@@ -140,7 +140,7 @@ function addModal( modalImg,modalName ,modalDesc,modalPrice) {
                                         <div class="total" style="margin-bottom: 10px;">
                                             <div class=""
                                                 style=" display: inline-block; width: 98px; font-weight: 600;">
-                                                <span> Total </span> <span style="float: right;"> : </span>
+                                                <span> Tổng </span> <span style="float: right;"> : </span>
                                             </div>
                                             <span class="total__price"> </span>
                                         </div>
@@ -150,7 +150,7 @@ function addModal( modalImg,modalName ,modalDesc,modalPrice) {
                                         <div class="note" style="margin-bottom: 20px;">
                                             <div class=""
                                                 style=" display: inline-block; width: 98px; font-weight: 600;">
-                                                <span> Notes </span>
+                                                <span>Ghi chú </span>
                                             </div>
                                             <textarea rows="2" class="message" placeholder="Your message "
                                                 aria-required="true" style="width: 100%;"> </textarea>
