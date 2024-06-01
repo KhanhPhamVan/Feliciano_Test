@@ -4,21 +4,31 @@ const nav = document.querySelector("nav");
 const sections = document.querySelectorAll("section");
 sections[0].classList.add("active");
 sections[1].classList.add("active");
+const backHead = document.querySelector(".back_head")
+// Khai báo biến cờ
+
+
+let isFirstScroll = true;
+console.log(isFirstScroll);
+
+
 document.addEventListener("scroll", () => {
   if (window.scrollY > 500) {
     nav.classList.add("nav-fiexd-top");
-  } else {
+    backHead.style.transform = "translateY(-100px)";
+  } else if (window.scrollY <= 500) {
+    backHead.style.transform = "translateY(50px)";
     nav.classList.remove("nav-fiexd-top");
+    
   }
 
   sections.forEach(function (item) {
-    sections[0];
-
     if (item.offsetTop - window.scrollY < 350) {
       item.classList.add("active");
     }
   });
 });
+
 
 // nav bar
 const navBar = document.querySelector(".nav__bar");
