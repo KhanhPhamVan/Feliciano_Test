@@ -15,7 +15,7 @@ console.log(isFirstScroll);
 document.addEventListener("scroll", () => {
   if (window.scrollY > 500) {
     nav.classList.add("nav-fiexd-top");
-    backHead.style.transform = "translateY(-100px)";
+    backHead.style.transform = "translateY(-50px)";
   } else if (window.scrollY <= 500) {
     backHead.style.transform = "translateY(50px)";
     nav.classList.remove("nav-fiexd-top");

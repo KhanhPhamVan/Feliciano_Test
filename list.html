@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page title</title>
+    <link rel="stylesheet" href="./css/list.css">
+    <link rel="icon" href="./img/logo3.png" type="image/x-icon">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+</html>
+
+<body>
+    <div class="container">
+        <aside>
+            <div class="top">
+                <a href="./index.html">
+                    <div class="logo">
+                        <h2 style="font-size: 35px; ">Feliciano</h2>
+                    </div>
+                </a>
+                <div id="close_btn">
+                    <span class="material-symbols-outlined">
+                        close
+                    </span>
+                </div>
+            </div>
+            <div class="sidebar">
+                <a href="./Admin.html" >
+                    <span class="material-symbols-outlined">
+                        grid_view
+                    </span>
+                    <h3>Tổng quan</h3>
+                </a>
+                <div class="dropdown">
+                    <a href="#" class="active">
+                        <span class="material-symbols-outlined">
+                            group
+                        </span>
+                        <h3>Nhân viên<span class="material-symbols-outlined">
+                                arrow_drop_down
+                            </span></h3>
+                    </a>
+                    <div>
+                        <ul>
+                            <li><a href="./staff.html">Thẻ nhân viên</a></li>
+                            <li><a href="#">Danh sách</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <a href="./dish.html">
+                    <span class="material-symbols-outlined">
+                        restaurant_menu
+                    </span>
+                    <h3>Món ăn</h3>
+                </a>
+                <a href="#">
+                    <span class="material-symbols-outlined">
+                        mail
+                    </span>
+                    <h3>Tin nhắn</h3>
+                    <span class="msg_count">14</span>
+                    <a href="#">
+                        <span class="material-symbols-outlined">
+                            analytics
+                        </span>
+                        <h3>Biểu đồ</h3>
+                    </a>
+                    <a href="./login.html">
+                        <span class="material-symbols-outlined">
+                            logout
+                        </span>
+                        <h3>Đăng xuất</h3>
+                    </a>
+            </div>
+        </aside>
+        <main>
+
+            <div class="date">
+                <input type="date">
+            </div>
+
+            <div class="top">
+                <button id="menu_bar">
+                    <span class="material-symbols-outlined">
+                        menu
+                    </span>
+                </button>
+                <div class="theme-toggler">
+                    <span class="material-symbols-outlined active">
+                        light_mode
+                    </span>
+                    <span class="material-symbols-outlined">
+                        dark_mode
+                    </span>
+                </div>
+                <div class="profile">
+                    <div class="info">
+                        <p><b>Hello</b></p>
+                        <p>Admin</p>
+                        <small class="text-muted"></small>
+                    </div>
+                    <div class="profile-photo">
+                        <img
+                            src="https://t4.ftcdn.net/jpg/04/75/00/99/360_F_475009987_zwsk4c77x3cTpcI3W1C1LU4pOSyPKaqi.jpg">
+                    </div>
+                </div>
+            </div>
+
+            <div class="table">
+                <div class="table_header">
+                    <p>Danh sách nhân viên</p>
+                    <div>
+                        <input placeholder="Search Staff" id="searchStaff">
+                        <button class="add_new" style="margin-left: 0.8rem;font-size: 0.7rem;">+Thêm nhân viên</button>
+
+                        <div class="add_modal hidden">
+                            <div class="add_modal_inner">
+                                <div class="add modal_header">
+                                    <p>Thêm nhân viên</p>
+                                    <i class="fa-solid fa-xmark" id="add_close"></i>
+                                </div>
+                                <div class="add_modal_body">
+                                    <div class="add_avt">
+                                        <input type="file" id="file_avt">
+                                    </div>
+                                    <div class="add_info">
+                                        <div>
+                                            <h2><span class="material-symbols-outlined">
+                                                    terminal
+                                                </span>Mã nhân viên</h2><input type="text" id="input_id">
+
+                                            <h2><span class="material-symbols-outlined">
+                                                    bookmark_manager
+                                                </span>Chức vụ</h2><input type="text" id="input_pos">
+                                            <h2><span class="material-symbols-outlined">
+                                                    person
+                                                </span>Tên</h2><input type="text" id="input_name">
+                                            <h2><span class="material-symbols-outlined">
+                                                    home
+                                                </span>Địa điểm</h2><input type="text" id="input_address">
+                                            <h2><span class="material-symbols-outlined">
+                                                    phone_in_talk
+                                                </span>Số điện thoại</h2><input type="text" id="input_phone">
+                                            <h2><span class="material-symbols-outlined">
+                                                    mail
+                                                </span>Email:</h2><input type="text" id="input_email">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="add_modal_footer">
+                                    <button class="add_done">Hoàn thành</button>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="table_section">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>ID No.</th>
+                                <th>Nhân viên</th>
+                                <th>Chức vụ</th>
+                                <th>Tên</th>
+                                <th>Địa chỉ</th>
+                                <th>Số điện thoại</th>
+                                <th>Email</th>
+                                <th>Thao tác</th>
+                            </tr>
+                        </thead>
+                        <tbody id="list_staff">
+                            <tr>
+                                <td>MN001</td>
+                                <td><img
+                                        src="https://www.restaurantowner.com/members/images/565.png?cb=20240308074839">
+                                </td>
+                                <td>Quản lý</td>
+                                <td>Marry</td>
+                                <td>Thành phố Hồ Chí Minh</td>
+                                <td>0987987890</td>
+                                <td>Marry@gmail.com</td>
+                                <td>
+                                    <button class="edit_staff"> 
+                                        <i class="fa-solid fa-pen-to-square"></i>
+                                    </button>
+                                    <div class="modal hidden">
+                                        <div class="modal_inner">
+                                            <div class="modal_header">
+                                                <p>Chỉnh sửa nhân viên</p>
+                                                <i class="fa-solid fa-xmark close_modal"></i>
+                                            </div>
+                                            <div class="modal_body">
+                                                <img
+                                                    src="https://www.restaurantowner.com/members/images/565.png?cb=20240308074839">
+                                                <div class="info">
+                                                    <h2 contenteditable=""><span class="material-symbols-outlined">
+                                                            terminal
+                                                        </span>Mã nhân viên:MN001</h2>
+                                                    <h2 contenteditable=""><span class="material-symbols-outlined">
+                                                            bookmark_manager
+                                                        </span>Chức vụ:Quản lý</h2>
+                                                    <h2 contenteditable=""><span class="material-symbols-outlined">
+                                                            person
+                                                        </span>Tên:Marry Curries</h2>
+                                                    <h2 contenteditable=""><span class="material-symbols-outlined">
+                                                        home
+                                                        </span>Địa chỉ:Thành phố Hồ Chí Minh</h2>
+                                                    <h2 contenteditable=""><span class="material-symbols-outlined">
+                                                        phone_in_talk
+                                                        </span>Số điện thoại:0987987890</h2>
+                                                    <h2 contenteditable=""><span class="material-symbols-outlined">
+                                                            mail
+                                                        </span>Email:Marry@gmail.com</h2>
+                                                </div>
+                                            </div>
+                                            <div class="modal_footer">
+                                                <button class="close">Hoàn thành</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button class="delete_staff">
+                                        <i class="fa-solid fa-trash"></i>
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>CH001</td>
+                                <td><img
+                                        src="./img/chef2.webp">
+                                <td>Bếp trưởng</td>
+                                <td>Rebeca</td>
+                                <td>Thành phố Hồ Chí Minh</td>
+                                <td>0778526552</td>
+                                <td>Rebeca@gmail.com</td>
+                                <td>
+                                    <button class="edit_staff">
+                                        <i class="fa-solid fa-pen-to-square" ></i>
+                                    </button>
+                                    <div class="modal hidden">
+                                        <div class="modal_inner">
+                                            <div class="modal_header">
+                                                <p>Chỉnh sửa nhân viên</p>
+                                                <i class="fa-solid fa-xmark close_modal"></i>
+                                            </div>
+                                            <div class="modal_body">
+                                                <img
+                                                    src="./img/chef2.webp">
+                                                <div class="info">
+                                                    <h2 contenteditable=""><span class="material-symbols-outlined">
+                                                            terminal
+                                                        </span>Mã nhân viên:CH001</h2>
+                                                    <h2 contenteditable=""><span class="material-symbols-outlined">
+                                                            bookmark_manager
+                                                        </span>Chức vụ:Bếp trưởng</h2>
+                                                    <h2 contenteditable=""><span class="material-symbols-outlined">
+                                                            person
+                                                        </span>Tên:Rebeca Welson</h2>
+                                                    <h2 contenteditable=""><span class="material-symbols-outlined">
+                                                            home
+                                                        </span>Địa chỉ:Thành phố Hồ Chí Minh</h2>
+                                                    <h2 contenteditable=""><span class="material-symbols-outlined">
+                                                            phone_in_talk
+                                                            </span>Số điện thoại:0987987890</h2>
+                                                    <h2 contenteditable=""><span class="material-symbols-outlined">
+                                                            mail
+                                                        </span>Email:Rebeca@gmail.com</h2>
+                                                </div>
+                                            </div>
+                                            <div class="modal_footer">
+                                                <button class="close">Hoàn thành</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button class="delete_staff">
+                                        <i class="fa-solid fa-trash" ></i>
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>ST001</td>
+                                <td><img
+                                        src="https://chefjob.vn/wp-content/uploads/2017/10/bung-khay-phuc-vu-nha-hang.jpg">
+                                </td>
+                                <td>Phục vụ</td>
+                                <td>Anna</td>
+                                <td>Thành phố Hồ Chí Minh</td>
+                                <td>0982720965</td>
+                                <td>Anna@gmail.com</td>
+                                <td>
+                                    <button class="edit_staff">
+                                        <i class="fa-solid fa-pen-to-square" ></i>
+                                    </button>
+                                    <div class="modal hidden">
+                                        <div class="modal_inner">
+                                            <div class="modal_header">
+                                                <p>Chỉnh sửa nhân viên</p>
+                                                <i class="fa-solid fa-xmark close_modal"></i>
+                                            </div>
+                                            <div class="modal_body">
+                                                <img
+                                                    src="https://chefjob.vn/wp-content/uploads/2017/10/bung-khay-phuc-vu-nha-hang.jpg">
+                                                <div class="info">
+                                                    <h2 contenteditable=""><span class="material-symbols-outlined">
+                                                            terminal
+                                                        </span>Mã nhân viên:ST001</h2>
+                                                    <h2 contenteditable=""><span class="material-symbols-outlined">
+                                                            bookmark_manager
+                                                        </span>Chức vụ:Phục vụ</h2>
+                                                    <h2 contenteditable=""><span class="material-symbols-outlined">
+                                                            person
+                                                        </span>Tên:Anna Trần</h2>
+                                                    <h2 contenteditable=""><span class="material-symbols-outlined">
+                                                            home
+                                                        </span>Địa chỉ:Thành phố Hồ Chí Minh</h2>
+                                                    <h2 contenteditable=""><span class="material-symbols-outlined">
+                                                            phone_in_talk
+                                                        </span>Số điện thoại:0982720965</h2>
+                                                    <h2 contenteditable=""><span class="material-symbols-outlined">
+                                                            mail
+                                                        </span>Email:Anna@gmail.com</h2>
+                                                </div>
+                                            </div>
+                                            <div class="modal_footer">
+                                                <button class="close">Hoàn thành</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button class="delete_staff">
+                                        <i class="fa-solid fa-trash" ></i>
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>RC001</td>
+                                <td><img
+                                        src="https://www.showgroup.it/img/categories/hostess-e-steward.jpg">
+                                </td>
+                                <td>Lễ tân</td>
+                                <td>Maria</td>
+                                <td>Thành phố Hồ Chí Minh</td>
+                                <td>0988576321</td>
+                                <td>Maria@gmail.com</td>
+                                <td>
+                                    <button class="edit_staff">
+                                        <i class="fa-solid fa-pen-to-square" ></i>
+                                    </button>
+                                    <div class="modal hidden">
+                                        <div class="modal_inner">
+                                            <div class="modal_header">
+                                                <p>Chỉnh sửa nhân viên</p>
+                                                <i class="fa-solid fa-xmark close_modal"></i>
+                                            </div>
+                                            <div class="modal_body">
+                                                <img
+                                                    src="https://www.showgroup.it/img/categories/hostess-e-steward.jpg">
+                                                <div class="info">
+                                                    <h2 contenteditable=""><span class="material-symbols-outlined">
+                                                            terminal
+                                                        </span>Mã nhân viên:RC001</h2>
+                                                    <h2 contenteditable=""><span class="material-symbols-outlined">
+                                                            bookmark_manager
+                                                        </span>Chức vụ:Lễ tân</h2>
+                                                    <h2 contenteditable=""><span class="material-symbols-outlined">
+                                                            person
+                                                        </span>Tên:Maria Trần</h2>
+                                                    <h2 contenteditable=""><span class="material-symbols-outlined">
+                                                            home
+                                                        </span>Địa chỉ:Thành phố Hồ Chí Minh</h2>
+                                                    <h2 contenteditable=""><span class="material-symbols-outlined">
+                                                            phone_in_talk
+                                                        </span>Số điện thoại:0988576321</h2>
+                                                    <h2 contenteditable=""><span class="material-symbols-outlined">
+                                                            mail
+                                                        </span>Email:Maria@gmail.com</h2>
+                                                </div>
+                                            </div>
+                                            <div class="modal_footer">
+                                                <button class="close">Hoàn thành</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button class="delete_staff">
+                                        <i class="fa-solid fa-trash" ></i>
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>ST002</td>
+                                <td><img
+                                        src="https://blog.maybanhang.net/hs-fs/hubfs/Kim%20Chi/nha%20hang/nhan-viec-phuc-vu-nha-hang.jpg?width=600&name=nhan-viec-phuc-vu-nha-hang.jpg">
+                                </td>
+                                <td>Phục vụ</td>
+                                <td>Phương</td>
+                                <td>Thành phố Hồ Chí Minh</td>
+                                <td>0982720965</td>
+                                <td>Phuong@gmail.com</td>
+                                <td>
+                                    <button class="edit_staff">
+                                        <i class="fa-solid fa-pen-to-square" ></i>
+                                    </button>
+                                    <div class="modal hidden">
+                                        <div class="modal_inner">
+                                            <div class="modal_header">
+                                                <p>Chỉnh sửa nhân viên</p>
+                                                <i class="fa-solid fa-xmark close_modal"></i>
+                                            </div>
+                                            <div class="modal_body">
+                                                <img
+                                                    src="https://blog.maybanhang.net/hs-fs/hubfs/Kim%20Chi/nha%20hang/nhan-viec-phuc-vu-nha-hang.jpg?width=600&name=nhan-viec-phuc-vu-nha-hang.jpg">
+                                                <div class="info">
+                                                    <h2 contenteditable=""><span class="material-symbols-outlined">
+                                                            terminal
+                                                        </span>Mã nhân viên:ST002</h2>
+                                                    <h2 contenteditable=""><span class="material-symbols-outlined">
+                                                            bookmark_manager
+                                                        </span>Chức vụ:Phục vụ</h2>
+                                                    <h2 contenteditable=""><span class="material-symbols-outlined">
+                                                            person
+                                                        </span>Tên:Phương Nguyễn</h2>
+                                                    <h2 contenteditable=""><span class="material-symbols-outlined">
+                                                            home
+                                                        </span>Địa chỉ:Thành phố Hồ Chí Minh</h2>
+                                                    <h2 contenteditable=""><span class="material-symbols-outlined">
+                                                            phone_in_talk
+                                                        </span>Số điện thoại:0982720965</h2>
+                                                    <h2 contenteditable=""><span class="material-symbols-outlined">
+                                                            mail
+                                                        </span>Email:Phuong@gmail.com</h2>
+                                                </div>
+                                            </div>
+                                            <div class="modal_footer">
+                                                <button class="close">Hoàn thành</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button class="delete_staff">
+                                        <i class="fa-solid fa-trash" ></i>
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>ST003</td>
+                                <td><img
+                                        src="https://www.hoteljob.vn/files/Anh-HTJ-Hong/nghiep-vu-nha-hang-khach-san-la-gi.jpg">
+                                </td>
+                                <td>Phục vụ</td>
+                                <td>Nga</td>
+                                <td>Thành phố Hồ Chí Minh</td>
+                                <td>0896357896</td>
+                                <td>Nga@gmail.com</td>
+                                <td>
+                                    <button class="edit_staff">
+                                        <i class="fa-solid fa-pen-to-square" ></i>
+                                    </button>
+                                    <div class="modal hidden">
+                                        <div class="modal_inner">
+                                            <div class="modal_header">
+                                                <p>Chỉnh sửa nhân viên</p>
+                                                <i class="fa-solid fa-xmark close_modal"></i>
+                                            </div>
+                                            <div class="modal_body">
+                                                <img
+                                                    src="https://www.hoteljob.vn/files/Anh-HTJ-Hong/nghiep-vu-nha-hang-khach-san-la-gi.jpg">
+                                                <div class="info">
+                                                    <h2 contenteditable=""><span class="material-symbols-outlined">
+                                                            terminal
+                                                        </span>Mã nhân viên:ST003</h2>
+                                                    <h2 contenteditable=""><span class="material-symbols-outlined">
+                                                            bookmark_manager
+                                                        </span>Chức vụ:Phục vụ</h2>
+                                                    <h2 contenteditable=""><span class="material-symbols-outlined">
+                                                            person
+                                                        </span>Tên:Nga Trần</h2>
+                                                    <h2 contenteditable=""><span class="material-symbols-outlined">
+                                                            home
+                                                        </span>Địa chỉ:Thành phố Hồ Chí Minh</h2>
+                                                    <h2 contenteditable=""><span class="material-symbols-outlined">
+                                                            home
+                                                        </span>Số điện thoại:0896357896</h2>
+                                                    <h2 contenteditable=""><span class="material-symbols-outlined">
+                                                            mail
+                                                        </span>Email:Nga@gmail.com</h2>
+                                                </div>
+                                            </div>
+                                            <div class="modal_footer">
+                                                <button class="close">Hoàn thành</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button class="delete_staff">
+                                        <i class="fa-solid fa-trash" ></i>
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>ST004</td>
+                                <td><img
+                                        src="https://chefjob.vn/wp-content/uploads/2020/07/kham-pha-vai-tro-cong-viec-cua-waiter-la-gi.jpg">
+                                </td>
+                                <td>Phục vụ</td>
+                                <td>Jack</td>
+                                <td>Thành phố Hồ Chí Minh</td>
+                                <td>0896357895</td>
+                                <td>Jack@gmail.com</td>
+                                <td>
+                                    <button class="edit_staff">
+                                        <i class="fa-solid fa-pen-to-square" ></i>
+                                    </button>
+                                    <div class="modal hidden">
+                                        <div class="modal_inner">
+                                            <div class="modal_header">
+                                                <p>Chỉnh sửa nhân viên</p>
+                                                <i class="fa-solid fa-xmark close_modal"></i>
+                                            </div>
+                                            <div class="modal_body">
+                                                <img
+                                                    src="https://chefjob.vn/wp-content/uploads/2020/07/kham-pha-vai-tro-cong-viec-cua-waiter-la-gi.jpg">
+                                                <div class="info">
+                                                    <h2 contenteditable=""><span class="material-symbols-outlined">
+                                                            terminal
+                                                        </span>Mã nhân viên:ST004</h2>
+                                                    <h2 contenteditable=""><span class="material-symbols-outlined">
+                                                            bookmark_manager
+                                                        </span>Chức vụ:Phục vụ</h2>
+                                                    <h2 contenteditable=""><span class="material-symbols-outlined">
+                                                            person
+                                                        </span>Tên:Jack Trịnh</h2>
+                                                    <h2 contenteditable=""><span class="material-symbols-outlined">
+                                                            home
+                                                        </span>Địa chỉ:Thành phố Hồ Chí Minh</h2>
+                                                    <h2 contenteditable=""><span class="material-symbols-outlined">
+                                                            home
+                                                        </span>Số điện thoại:0896357895</h2>
+                                                    <h2 contenteditable=""><span class="material-symbols-outlined">
+                                                            mail
+                                                        </span>Email:Jack@gmail.com</h2>
+                                                </div>
+                                            </div>
+                                            <div class="modal_footer">
+                                                <button class="close">Hoàn thành</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button class="delete_staff">
+                                        <i class="fa-solid fa-trash" ></i>
+                                    </button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="delete_modal hidden">
+                        <div class="delete_modal_inner">
+                            <div class="delete_modal_header">
+                                <p>Xóa nhân viên</p>
+                                <i class="fa-solid fa-xmark" id="delete_exit"></i>
+                            </div>
+                            <div class="delete_modal_body">
+                                <p>Bạn có chắc muốn xóa nhân viên này</p>
+                                <button style="background-color: #C8A97E;">Chấp nhận</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </main>
+    </div>
+    <script src="./js/list.js"></script>
+</body>
+
+</html>
